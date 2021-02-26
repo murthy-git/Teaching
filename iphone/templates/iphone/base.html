@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apple</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-center">
+            <a class="btn btn-outline-info pd-5 m-5" href="{% url 'new-launches' %}">New Launches</a>
+            <a class="btn btn-outline-info pd-5 m-5" href="{% url 'new-phones' %}">New Phones</a>
+            <a class="btn btn-outline-info pd-5 m-5" href="{% url 'popular-products' %}">Popular Products</a>
+            <a class="btn btn-outline-info pd-5 m-5" href="{% url 'best-selling' %}">Best Selling</a>
+        </div>
+        <hr>
+    </div>
+    <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            {% block content %}
+            {% endblock %}
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="{% static 'iphone/macbook.jpg' %}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                    <h3 class="d-flex justify-content-center">Rs. 100000</h3>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="{% static 'iphone/watch.jpg' %}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
+                <div class="card-body">
+                    <h3 class="d-flex justify-content-center">Rs. 20000</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+</body>
+</html>
