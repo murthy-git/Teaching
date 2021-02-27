@@ -14,29 +14,12 @@
             <a class="btn btn-outline-info pd-5 m-5" href="{% url 'popular-products' %}">Popular Products</a>
             <a class="btn btn-outline-info pd-5 m-5" href="{% url 'best-selling' %}">Best Selling</a>
         </div>
-        <hr>
     </div>
     <div class="album py-5 bg-light">
         <div class="container">
           <div class="row">
             {% block content %}
             {% endblock %}
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="{% static 'iphone/macbook.jpg' %}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                <div class="card-body">
-                    <h3 class="d-flex justify-content-center">Rs. 100000</h3>
-                </div>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="card mb-4 box-shadow">
-                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" src="{% static 'iphone/watch.jpg' %}" data-holder-rendered="true" style="height: 225px; width: 100%; display: block;">
-                <div class="card-body">
-                    <h3 class="d-flex justify-content-center">Rs. 20000</h3>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
